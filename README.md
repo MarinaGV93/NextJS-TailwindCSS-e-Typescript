@@ -1,10 +1,10 @@
 <h1 id="title" align="center">
-  Curso intensivo next e react
+  NextJS, TailwindCSS e Typescript
 </h1>
 
 <div id="cover" align="center">
 
-  ![Curso intensivo next e react](https://import.cdn.thinkific.com/cdn-cgi/image/width=380,onerror=redirect/220759/courses/1440446/AXdRdXbaSVSeeEXwm7rr_2%20(1).png "Curso intensivo next e react")
+  ![NextJS, TailwindCSS e Typescript](https://miro.medium.com/v2/resize:fit:1400/1*-bG_xAqurVd0T35ulOYu0Q.jpeg "NextJS, TailwindCSS e Typescript")
 
 </div>
 
@@ -12,7 +12,7 @@
 
 <br>
 
-<p>Nesse repositório tem o passo a passo do que foi aprendido no curso intensivo next e react.</p>
+<p>Nesse repositório tem o passo a passo do que foi aprendido no curso de NextJS, TailwindCSS e Typescript.</p>
 
 <!-- Shields -->
 
@@ -43,11 +43,11 @@
 <!-- * [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/)-->
 <!-- * [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)-->
 <!-- * [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML) -->
-* [React](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+<!-- * [React](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started) -->
 * [Next](https://nextjs.org/docs)
 * [TailwindCSS](https://tailwindcss.com/docs/installation)
-* [Firebase](https://firebase.google.com/docs?hl=pt)
-<!-- * [TypeScript](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjS98OPjbOFAxVlIrkGHbDfAR0QFnoECBAQAQ&url=https%3A%2F%2Fwww.typescriptlang.org%2F&usg=AOvVaw0CNxTP-CKE5ss0r3aWazpG&opi=89978449) -->
+<!-- * [Firebase](https://firebase.google.com/docs?hl=pt) -->
+* [TypeScript](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjS98OPjbOFAxVlIrkGHbDfAR0QFnoECBAQAQ&url=https%3A%2F%2Fwww.typescriptlang.org%2F&usg=AOvVaw0CNxTP-CKE5ss0r3aWazpG&opi=89978449)
 <!-- * [Material UI](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjRu8y3jrOFAxVXgWEGHf6OA_0QFnoECBcQAQ&url=https%3A%2F%2Fmui.com%2F&usg=AOvVaw05GdO8GinQVOo2O20a7gMF&opi=89978449) -->
 
 <br>
