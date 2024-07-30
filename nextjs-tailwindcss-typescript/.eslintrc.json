@@ -1,3 +1,7 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    // Sempre tem que ter um ponto e virgula
+    "semi": [2, "always"]
+  }
 }
