@@ -3,3 +3,6 @@
 
 - Rodar projeto
     - npm run dev
+
+- Criar um link temporário para acessar o localhost em qualquer lugar
+    - npx localtunnel --port 3000
