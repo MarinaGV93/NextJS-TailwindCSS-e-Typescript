@@ -28,5 +28,11 @@ body {
   /* Aplicar */
   @apply bg-background text-text
   /* Tamanho maximo da tela */
-  w-screen h-screen;
+  w-screen h-screen
+  /* Distancia do underline com o texto */
+  underline-offset-4;
+}
+
+a {
+  @apply hover:underline active:opacity-50 transition-opacity;
 }

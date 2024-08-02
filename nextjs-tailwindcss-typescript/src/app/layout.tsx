@@ -1,5 +1,9 @@
+// Imports externos
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
+
+// Imports internos
+import Header from "./components/header/Header";
 import "./globals.css";
 
 const nunito = Nunito({ subsets: ["latin"] });
@@ -22,7 +26,11 @@ interface IRootLayout
 export default function RootLayout({ children }: IRootLayout) {
   return (
     <html lang="pt-br">
-      <body className={nunito.className}>{children}</body>
+      <body className={nunito.className}>
+        {/* Header para mostrar em todas as paginas */}
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
