@@ -1,3 +1,9 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "CodarSe - Página Inicial",
+};
+
 export default function PageHome() {
   return (
     <main
@@ -8,7 +14,7 @@ export default function PageHome() {
     </main>
   );
   // Adicionar atributo
-  document.documentElement.setAttribute("light", "true");
+  // document.documentElement.setAttribute("light", "true");
   // Remover atributo
-  document.documentElement.removeAttribute("light");
+  // document.documentElement.removeAttribute("light");
 }

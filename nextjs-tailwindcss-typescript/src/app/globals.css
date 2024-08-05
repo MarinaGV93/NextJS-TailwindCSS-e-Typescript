@@ -36,11 +36,3 @@ body {
 a {
   @apply hover:underline active:opacity-50 transition-opacity;
 }
-
-/* Breakpoints */
-
-/* Mínimo de 640px */
-/* Mínimo de 768px */
-/* Mínimo de 1024px */
-/* Mínimo de 1280px */
-/* Mínimo de 1536px */
