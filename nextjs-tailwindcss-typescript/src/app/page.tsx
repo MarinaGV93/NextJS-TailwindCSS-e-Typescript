@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { Card } from "./components/card/Card";
 
 export const metadata: Metadata = {
   title: "CodarSe - Página Inicial",
@@ -10,7 +11,7 @@ export default function PageHome() {
       // Usar a cor criada no arquivo tailwind.config
       className="bg-background"
     >
-      Home
+      <Card />
     </main>
   );
   // Adicionar atributo

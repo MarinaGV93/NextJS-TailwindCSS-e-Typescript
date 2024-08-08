@@ -9,3 +9,6 @@
 
 - Adicionar icones
     - yarn add react-icons
+
+- Adicionar imagens que serão usadas da API do youtube
+    - Modificar o arquivo next.config.mjs
