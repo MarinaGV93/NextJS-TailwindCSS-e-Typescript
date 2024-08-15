@@ -25,6 +25,8 @@
 
 html,
 body {
+  /* O scroll lateral fique sobre o elemento, para nao  ocupar espaço, deixando a pagina quebrada */
+  overflow: overlay;
   /* Aplicar */
   @apply bg-background text-text
   /* Tamanho maximo da tela */
