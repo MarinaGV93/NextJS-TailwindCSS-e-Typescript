@@ -11,7 +11,7 @@ export default function PageHome() {
       // Usar a cor criada no arquivo tailwind.config
       className="bg-background"
     >
-      <Section />
+      <Section title="Veja mais cursos" variant="h-list" />
     </main>
   );
   // Adicionar atributo

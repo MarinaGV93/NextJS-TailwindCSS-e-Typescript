@@ -29,7 +29,7 @@ export const Card = ({ title, description, href, image }: ICardProps) => {
         aspect-video
         // Resolver a distorçao, mantendo a perspectiva da imagem 
         object-cover
-        rounded-3xl
+        rounded-2xl
         "
         />
         <h4 className="font-extrabold text-lg">{title}</h4>
