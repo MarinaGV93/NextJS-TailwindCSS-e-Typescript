@@ -1,4 +1,7 @@
+"use client";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { Card, ICardProps } from "../card/Card";
+import { useRef } from "react";
 
 interface ISectionProps {
   title: string;
@@ -7,11 +10,28 @@ interface ISectionProps {
   ICardProps[];
 }
 export const Section = ({ title, items, variant = "grid" }: ISectionProps) => {
+  // Referencia para o scroll
+  const scrollRef = useRef<HTMLUListElement>(null);
+
+  const handleScroll = (scroll: number) => {
+    const currentScrollLeft =
+      // Pegar a posicao do scroll atual
+      scrollRef.current?.scrollLeft || 0;
+
+    scrollRef.current?.scrollTo({
+      // Suave
+      behavior: "smooth",
+      // Passar a nova posicao somando a antiga e a nova
+      left: currentScrollLeft + scroll,
+    });
+  };
+
   return (
     <section className="flex flex-col gap-2 px-4">
       <h2 className="font-bold text-xl">{title}</h2>
 
       <ul
+        ref={scrollRef}
         data-variant={variant}
         className="grid 
       // 1 coluna
@@ -31,6 +51,14 @@ export const Section = ({ title, items, variant = "grid" }: ISectionProps) => {
       data-[variant=h-list]:sm:overflow-x-auto
       "
       >
+        <button
+          onClick={() => handleScroll(-350)}
+          className="h-14 w-14 bg-primary rounded-full flex justify-center items-center sticky my-auto left-0 -ml-14"
+        >
+          <MdKeyboardArrowLeft size={32} />
+        </button>
+
+        {/* Cada item do card */}
         {items.map((item) => (
           <li
             // Cada item terá uma chave
@@ -46,6 +74,13 @@ export const Section = ({ title, items, variant = "grid" }: ISectionProps) => {
             />
           </li>
         ))}
+
+        <button
+          onClick={() => handleScroll(350)}
+          className="h-14 w-14 bg-primary rounded-full flex justify-center items-center sticky my-auto right-0 -ml-14"
+        >
+          <MdKeyboardArrowRight size={32} />
+        </button>
       </ul>
     </section>
   );

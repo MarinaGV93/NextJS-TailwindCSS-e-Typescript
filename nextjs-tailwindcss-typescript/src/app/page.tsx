@@ -25,7 +25,7 @@ export default function PageHome() {
               {
                 href: "/cursos/123",
                 image: "https://i.ytimg.com/vi/SVepTuBK4V0/hqdefault.jpg",
-                title: "Curso de API Rest, Node e Typescript",
+                title: "1 - Curso de API Rest, Node e Typescript",
                 description: ` Na primeira aula do curso de API Rest em Node e Typescript vamos ver
           juntos o escopo do curso e se esse curso faz sentido para você ou não.
           Quero te apresentar as tecnologias e conceitos que vamos usar no
@@ -57,7 +57,7 @@ export default function PageHome() {
               {
                 href: "/cursos/123",
                 image: "https://i.ytimg.com/vi/SVepTuBK4V0/hqdefault.jpg",
-                title: "Curso de API Rest, Node e Typescript",
+                title: "2 - Curso de API Rest, Node e Typescript",
                 description: ` Na primeira aula do curso de API Rest em Node e Typescript vamos ver
           juntos o escopo do curso e se esse curso faz sentido para você ou não.
           Quero te apresentar as tecnologias e conceitos que vamos usar no
@@ -89,7 +89,7 @@ export default function PageHome() {
               {
                 href: "/cursos/123",
                 image: "https://i.ytimg.com/vi/SVepTuBK4V0/hqdefault.jpg",
-                title: "Curso de API Rest, Node e Typescript",
+                title: "3 - Curso de API Rest, Node e Typescript",
                 description: ` Na primeira aula do curso de API Rest em Node e Typescript vamos ver
           juntos o escopo do curso e se esse curso faz sentido para você ou não.
           Quero te apresentar as tecnologias e conceitos que vamos usar no
@@ -121,7 +121,7 @@ export default function PageHome() {
               {
                 href: "/cursos/123",
                 image: "https://i.ytimg.com/vi/SVepTuBK4V0/hqdefault.jpg",
-                title: "Curso de API Rest, Node e Typescript",
+                title: "4 - Curso de API Rest, Node e Typescript",
                 description: ` Na primeira aula do curso de API Rest em Node e Typescript vamos ver
           juntos o escopo do curso e se esse curso faz sentido para você ou não.
           Quero te apresentar as tecnologias e conceitos que vamos usar no

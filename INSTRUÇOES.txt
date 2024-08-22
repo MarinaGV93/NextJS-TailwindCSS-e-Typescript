@@ -12,3 +12,8 @@
 
 - Adicionar imagens que serão usadas da API do youtube
     - Modificar o arquivo next.config.mjs
+
+- Pegar a referencia do elemento pelo console do navegador
+    - Clique no elemento e digite $0. ...
+        - $0.scrollTo() - passar o scroll passando o X e o Y ($0.scrollTo(300, 0))
+        - $0.scrollTo() - passar o scroll passando uma sobrecarga ($0.scrollTo({behavior: 'smooth', left: 300})) = scroll seja suave para esquerda
