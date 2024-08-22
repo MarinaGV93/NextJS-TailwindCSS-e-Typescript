@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-interface ICardProps {
+export interface ICardProps {
   image: string;
   title: string;
   description: string;
@@ -37,6 +37,8 @@ export const Card = ({ title, description, href, image }: ICardProps) => {
           className="
         // Máxima de 3 linhas
         line-clamp-3
+        sm:line-clamp-4
+        md:line-clamp-5
         "
         >
           {description}
