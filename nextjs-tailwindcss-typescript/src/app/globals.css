@@ -23,6 +23,16 @@
   --color-primary-contrast: #ffffff;
 } */
 
+* {
+  /* Outline = borda no elemento quando for clicado TAB */
+  @apply /* Muda a cor */
+  outline-primary
+  /* Grossura da borda */
+  outline-1
+  /* Um pouco menor */
+  -outline-offset-2;
+}
+
 html,
 body {
   /* O scroll lateral fique sobre o elemento, para nao  ocupar espaço, deixando a pagina quebrada */
