@@ -17,3 +17,7 @@
     - Clique no elemento e digite $0. ...
         - $0.scrollTo() - passar o scroll passando o X e o Y ($0.scrollTo(300, 0))
         - $0.scrollTo() - passar o scroll passando uma sobrecarga ($0.scrollTo({behavior: 'smooth', left: 300})) = scroll seja suave para esquerda
+
+- Dynamic Routes
+    - Usar a mesma página só mudando o parametro da URL
+    
