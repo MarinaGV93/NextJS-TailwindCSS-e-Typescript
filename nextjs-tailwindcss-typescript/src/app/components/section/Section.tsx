@@ -1,7 +1,7 @@
 "use client";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { Card, ICardProps } from "../card/Card";
-import { useRef } from "react";
+import { useRef, useState, UIEvent } from "react";
 
 interface ISectionProps {
   title: string;
@@ -13,7 +13,41 @@ export const Section = ({ title, items, variant = "grid" }: ISectionProps) => {
   // Referencia para o scroll
   const scrollRef = useRef<HTMLUListElement>(null);
 
-  const handleScroll = (scroll: number) => {
+  // Acompanhar o scroll
+  const [scrollAt, setScrollAt] = useState<"start" | "middle" | "end">("start");
+
+  // Saber a posicao do scroll (escutar o movimento do scroll dentro do UL)
+  const handleScroll =
+    // Evento do e do onScroll no UL
+    (event: UIEvent<HTMLUListElement>) => {
+      // console.log(
+      //   // Analisar o tamanho disponivel total do scroll
+      //   event.currentTarget.scrollWidth,
+      //   // Analisar o tamanho do scroll disponivel
+      //   event.currentTarget.clientWidth,
+      //   // Analisar em que posicao o scroll se encontra
+      //   event.currentTarget.scrollLeft
+      // );
+
+      // Se tiver no comeco do scroll
+      if (event.currentTarget.scrollLeft === 0) {
+        setScrollAt("start");
+      }
+
+      // Se tiver no final do scroll
+      else if (
+        // Tamanho total do scroll - tamanho disponivel = valor total do scroll quando estiver no final
+        event.currentTarget.scrollWidth - event.currentTarget.clientWidth ===
+        event.currentTarget.scrollLeft
+      ) {
+        setScrollAt("end");
+      } else {
+        setScrollAt("middle");
+      }
+    };
+
+  // Definir o scroll
+  const handleSetScroll = (scroll: number) => {
     const currentScrollLeft =
       // Pegar a posicao do scroll atual
       scrollRef.current?.scrollLeft || 0;
@@ -33,7 +67,18 @@ export const Section = ({ title, items, variant = "grid" }: ISectionProps) => {
       <ul
         ref={scrollRef}
         data-variant={variant}
-        className="grid 
+        onScroll={
+          // (e) =>
+
+          // Colocar no handleScroll
+          // UIEvent<HTMLUListElement>
+          handleScroll
+        }
+        className="
+        // Nome da classe
+        overflow-primary 
+        // Definir o grid
+        grid 
       // 1 coluna
       grid-cols-1
 
@@ -51,12 +96,26 @@ export const Section = ({ title, items, variant = "grid" }: ISectionProps) => {
       data-[variant=h-list]:sm:overflow-x-auto
       "
       >
-        <button
-          onClick={() => handleScroll(-350)}
-          className="h-14 w-14 bg-primary rounded-full flex justify-center items-center sticky my-auto left-0 -ml-14"
-        >
-          <MdKeyboardArrowLeft size={32} />
-        </button>
+        {/* Quando nao for GRID */}
+        {variant === "h-list" && (
+          <button
+            // Desabilitar o botão se o scroll estiver no inicio
+            disabled={scrollAt === "start"}
+            onClick={() => handleSetScroll(-350)}
+            className="h-14 w-14 bg-primary rounded-full 
+            // Esconder por padrao
+            hidden
+            // Se nao for mobile
+            sm:flex justify-center items-center sticky my-auto left-0 -ml-14 transition-opacity 
+            // Mostrar um pouco
+            active: opacity-80
+          // Se desabilitado, esconder
+          disabled:opacity-0 
+          "
+          >
+            <MdKeyboardArrowLeft size={32} />
+          </button>
+        )}
 
         {/* Cada item do card */}
         {items.map((item) => (
@@ -75,12 +134,26 @@ export const Section = ({ title, items, variant = "grid" }: ISectionProps) => {
           </li>
         ))}
 
-        <button
-          onClick={() => handleScroll(350)}
-          className="h-14 w-14 bg-primary rounded-full flex justify-center items-center sticky my-auto right-0 -ml-14"
-        >
-          <MdKeyboardArrowRight size={32} />
-        </button>
+        {/* Quando nao for GRID */}
+        {variant === "h-list" && (
+          <button
+            // Desabilitar o botão se o scroll estiver no fim
+            disabled={scrollAt === "end"}
+            onClick={() => handleSetScroll(350)}
+            className="h-14 w-14 bg-primary rounded-full 
+            // Esconder por padrao
+            hidden
+            // Se nao for mobile
+            sm:flex justify-center items-center sticky my-auto right-0 -ml-14 transition-opacity 
+            // Mostrar um pouco
+            active: opacity-80
+          // Se desabilitado, esconder
+          disabled:opacity-0 
+          "
+          >
+            <MdKeyboardArrowRight size={32} />
+          </button>
+        )}
       </ul>
     </section>
   );

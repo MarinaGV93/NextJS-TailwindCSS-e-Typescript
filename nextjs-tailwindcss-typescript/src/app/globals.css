@@ -48,3 +48,38 @@ body {
 a {
   @apply hover:underline active:opacity-50 transition-opacity;
 }
+
+/* Modificar na classe */
+.overflow-primary::-webkit-scrollbar-thumb {
+  @apply bg-primary;
+}
+
+*
+/* Modificando um pseudo elemento */
+/* Modificando o scrollbar */
+::-webkit-scrollbar {
+  @apply h-3 w-2;
+}
+
+/* Botões do scrollbar */
+*::-webkit-scrollbar-button {
+  @apply /* esconder */
+  hidden;
+}
+
+/* Cantos */
+*::-webkit-scrollbar-corner {
+  @apply bg-transparent;
+}
+
+/* Permitir que configure a scrollbar*/
+*::-webkit-scrollbar-thumb {
+  @apply /* Cantos arredondados */
+  rounded-full 
+  bg-paper;
+}
+
+/* Barra branca do scrollbar */
+*::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
