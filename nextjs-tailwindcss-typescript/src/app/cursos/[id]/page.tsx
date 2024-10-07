@@ -1,3 +1,4 @@
+import { CourseHeader } from "@/app/components/course-header/CourseHeader";
 import { Metadata } from "next";
 
 interface Props {
@@ -20,9 +21,18 @@ Promise<Metadata> {
 export default function PageDetalheCurso({ params }: Props) {
   return (
     <main className="mt-8 flex justify-center">
-      Detalhe do curso
-      {/* Pega o id da URL */}
-      {params.id}
+      <div
+        className="
+        // Tamanho total
+        w-full
+        // Se a tela for pelo menos 880px, irá limitar o tamanho em 880px
+        min-[880px]:max-w-[880px]
+        "
+      >
+        <CourseHeader />
+        {/* Pega o id da URL */}
+        {/* {params.id} */}
+      </div>
     </main>
   );
 }

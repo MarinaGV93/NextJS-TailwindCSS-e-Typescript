@@ -9,7 +9,7 @@ export default function PageCursos() {
   return (
     <main className="mt-8 flex justify-center">
       <div
-        className="
+        className="w-full
         // Se a tela for pelo menos 880px, irá limitar o tamanho em 880px
         min-[880px]:max-w-[880px]
         "
