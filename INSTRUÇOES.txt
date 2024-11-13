@@ -4,6 +4,9 @@
 - Rodar projeto
     - npm run dev
 
+- Instalar dentro da pasta depois de clonar
+    - npm install
+
 - Criar um link temporário para acessar o localhost em qualquer lugar
     - npx localtunnel --port 3000
 
