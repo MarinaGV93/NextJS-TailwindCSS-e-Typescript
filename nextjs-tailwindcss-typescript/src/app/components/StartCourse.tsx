@@ -24,7 +24,10 @@ export const StartCourse = ({
 
   return (
     <>
-      <div ref={ref} className="p-3 bg-paper rounded-md flex flex-col gap-4">
+      <div
+        ref={ref}
+        className="p-3 bg-paper rounded-md flex flex-col gap-4 md:sticky md:top-[104px]"
+      >
         <Link
           href={`/player/${idCouse}/${idClass}`}
           // Pegar a imagem
@@ -52,7 +55,7 @@ export const StartCourse = ({
         </Link>
         <Link
           href={`/player/${idCouse}/${idClass}`}
-          className="bg-primary p-2 px-3 rounded text-center"
+          className="bg-primary p-2 px-3 rounded text-center hover:no-underline"
         >
           Começar curso
         </Link>
@@ -67,7 +70,7 @@ export const StartCourse = ({
           </h1>
           <Link
             href={`/player/${idCouse}/${idClass}`}
-            className="bg-primary p-2 px-3 rounded text-center"
+            className="bg-primary p-2 px-3 rounded text-center hover:no-underline"
           >
             Começar curso
           </Link>
