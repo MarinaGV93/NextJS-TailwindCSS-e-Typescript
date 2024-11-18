@@ -1,4 +1,4 @@
-import { Class } from "@/app/components/course-content/components/Class";
+import { ClassGroup } from "@/app/components/course-content/components/ClassGroup";
 import { CourseHeader } from "@/app/components/course-header/CourseHeader";
 import { StartCourse } from "@/app/components/StartCourse";
 import { Metadata } from "next";
@@ -16,7 +16,7 @@ Promise<Metadata> {
 
   return {
     // Título dinamico
-    title: params.id,
+    // title: params.id,
   };
 }
 
@@ -45,13 +45,32 @@ export default function PageDetalheCurso({ params }: Props) {
         <div
           className="
         // 2 terços
-        flex-[2]"
+        flex-[2]
+        flex flex-col gap-4"
         >
           <CourseHeader />
-          <Class
-            title="NextJS, TailwindCSS e Typescript: #00 - Apresentação do projeto"
+          <ClassGroup
+            title="Introdução e apresentação do projeto"
+            courseId="123"
+            classes={[
+              {
+                id: "1",
+                title:
+                  "NextJS, TailwindCSS e Typescript: #00 - Apresentação do projeto",
+              },
+              {
+                id: "2",
+                title:
+                  "NextJS, TailwindCSS e Typescript: #01 - Apresentação do protótipo",
+              },
+              {
+                id: "3",
+                title:
+                  "NextJS, TailwindCSS e Typescript: #02 - Apresentação do código fonte",
+              },
+            ]}
             // https://www.codarse.com/player/PL29TaWXah3iaKcSxmOa_e_bKCkS10Rsn-/UEwyOVRhV1hhaDNpYUtjU3htT2FfZV9iS0NrUzEwUnNuLS41NkI0NEY2RDEwNTU3Q0M2
-            playerUrl="/player/{courseId}/{classId}"
+            // playerUrl="/player/{courseId}/{classId}"
           />
 
           {/* Pega o id da URL */}
