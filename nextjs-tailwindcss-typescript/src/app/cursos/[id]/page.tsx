@@ -1,3 +1,4 @@
+import { Class } from "@/app/components/course-content/components/Class";
 import { CourseHeader } from "@/app/components/course-header/CourseHeader";
 import { StartCourse } from "@/app/components/StartCourse";
 import { Metadata } from "next";
@@ -47,11 +48,12 @@ export default function PageDetalheCurso({ params }: Props) {
         flex-[2]"
         >
           <CourseHeader />
-          <CourseHeader />
-          <CourseHeader />
-          <CourseHeader />
-          <CourseHeader />
-          <CourseHeader />
+          <Class
+            title="NextJS, TailwindCSS e Typescript: #00 - Apresentação do projeto"
+            // https://www.codarse.com/player/PL29TaWXah3iaKcSxmOa_e_bKCkS10Rsn-/UEwyOVRhV1hhaDNpYUtjU3htT2FfZV9iS0NrUzEwUnNuLS41NkI0NEY2RDEwNTU3Q0M2
+            playerUrl="/player/{courseId}/{classId}"
+          />
+
           {/* Pega o id da URL */}
           {/* {params.id} */}
         </div>
