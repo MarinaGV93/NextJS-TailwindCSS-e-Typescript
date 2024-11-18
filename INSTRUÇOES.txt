@@ -24,3 +24,6 @@
 - Dynamic Routes
     - Usar a mesma página só mudando o parametro da URL
     
+- Ficar escutando se um elemento esta presente ou nao na tela
+    - npm install react-intersection-observer --save
+    
