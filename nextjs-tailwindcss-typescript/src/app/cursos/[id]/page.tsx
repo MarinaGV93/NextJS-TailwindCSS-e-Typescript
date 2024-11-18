@@ -36,11 +36,6 @@ export default function PageDetalheCurso({ params }: Props) {
           imageUrl="https://i.ytimg.com/vi/SVepTuBK4V0/hqdefault.jpg"
         />
         <CourseHeader />
-        <CourseHeader />
-        <CourseHeader />
-        <CourseHeader />
-        <CourseHeader />
-        <CourseHeader />
         {/* Pega o id da URL */}
         {/* {params.id} */}
       </div>
