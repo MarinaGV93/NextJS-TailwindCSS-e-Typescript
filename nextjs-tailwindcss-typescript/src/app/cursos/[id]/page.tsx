@@ -1,4 +1,4 @@
-import { ClassGroup } from "@/app/components/course-content/components/ClassGroup";
+import { CourseContent } from "@/app/components/course-content/components/CourseContent";
 import { CourseHeader } from "@/app/components/course-header/CourseHeader";
 import { StartCourse } from "@/app/components/StartCourse";
 import { Metadata } from "next";
@@ -46,33 +46,62 @@ export default function PageDetalheCurso({ params }: Props) {
           className="
         // 2 terços
         flex-[2]
-        flex flex-col gap-4"
+        flex flex-col gap-12"
         >
           <CourseHeader />
-          <ClassGroup
-            title="Introdução e apresentação do projeto"
-            courseId="123"
-            classes={[
+
+          <CourseContent
+            classGroups={[
               {
-                id: "1",
-                title:
-                  "NextJS, TailwindCSS e Typescript: #00 - Apresentação do projeto",
+                title: "Introdução e apresentação do projeto",
+                courseId: "123",
+                classes: [
+                  {
+                    id: "1",
+                    title:
+                      "NextJS, TailwindCSS e Typescript: #00 - Apresentação do projeto",
+                  },
+                  {
+                    id: "2",
+                    title:
+                      "NextJS, TailwindCSS e Typescript: #01 - Apresentação do protótipo",
+                  },
+                  {
+                    id: "3",
+                    title:
+                      "NextJS, TailwindCSS e Typescript: #02 - Apresentação do código fonte",
+                  },
+                ],
               },
+
               {
-                id: "2",
-                title:
-                  "NextJS, TailwindCSS e Typescript: #01 - Apresentação do protótipo",
-              },
-              {
-                id: "3",
-                title:
-                  "NextJS, TailwindCSS e Typescript: #02 - Apresentação do código fonte",
+                title: "Primeiras configuração necessárias",
+                courseId: "123",
+                classes: [
+                  {
+                    id: "1",
+                    title:
+                      "NextJS, TailwindCSS e Typescript: #03 - Criação do projeto inicial",
+                  },
+                  {
+                    id: "2",
+                    title:
+                      "NextJS, TailwindCSS e Typescript: #04 - Para que serve cada arquivo no projeto",
+                  },
+                  {
+                    id: "3",
+                    title:
+                      "NextJS, TailwindCSS e Typescript: #05 - Removendo arquivos desnecessários",
+                  },
+                  {
+                    id: "4",
+                    title:
+                      "NextJS, TailwindCSS e Typescript: #06 - Melhorando a indexação do projeto",
+                  },
+                ],
               },
             ]}
-            // https://www.codarse.com/player/PL29TaWXah3iaKcSxmOa_e_bKCkS10Rsn-/UEwyOVRhV1hhaDNpYUtjU3htT2FfZV9iS0NrUzEwUnNuLS41NkI0NEY2RDEwNTU3Q0M2
-            // playerUrl="/player/{courseId}/{classId}"
           />
-
           {/* Pega o id da URL */}
           {/* {params.id} */}
         </div>
