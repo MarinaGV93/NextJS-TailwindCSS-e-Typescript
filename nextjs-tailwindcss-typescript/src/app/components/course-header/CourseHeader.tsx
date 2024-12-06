@@ -1,6 +1,20 @@
-import { CollapsibleText } from "./components/CollapsibleText";
+"use client";
 
-export const CourseHeader = () => {
+import { MdShare } from "react-icons/md";
+import { CollapsibleText } from "./components/CollapsibleText";
+import { ContextCopy } from "./components/ContextCopy";
+
+export interface ICourseHeaderProps {
+  title: string;
+  description: string;
+  numberOfClasses: number;
+}
+
+export const CourseHeader = ({
+  title,
+  description,
+  numberOfClasses,
+}: ICourseHeaderProps) => {
   return (
     <div
       className="
@@ -9,28 +23,23 @@ export const CourseHeader = () => {
     flex-col gap-2 
     "
     >
-      <h1 className="font-extrabold text-xl">🎩 Curso de Figma para DEVs</h1>
+      <h1 className="font-extrabold text-xl">{title}</h1>
 
       <CollapsibleText
         // Numero de linhas para mostrar quando o componente estiver minimizado
         numberOfLinesWhenClosed={3}
       >
-        Os melhores desenvolvedores do mercado fazem questão que estar
-        preparados para os mais diversos tipos de desafios nas suas carreiras. A
-        habilidade de desenvolver protótipos ou mesmo de entender como um
-        protótipo foi desenvolvido pode ser um baita diferencial para você.
-        Nesse curso que te mostrar de forma simples e prática como desenvolver
-        protótipos no figma, vamos aproveitar certos conhecimentos de
-        programação ao decorrer do curso. Tenho certeza que esse tem o potencial
-        de ser o melhor curso de figma para desenvolvedores disponíveis
-        gratuitamente. #CODARSE
+        {description}
       </CollapsibleText>
 
       <div className="flex gap-2 items-center">
-        <button className="py-2 px-4 bg-paper rounded-full">
-          Compartilhar
-        </button>
-        <span>48 aulas</span>
+        <ContextCopy title="Copie o link abaixo" content={window.location.href}>
+          <button className="py-2 px-4 bg-paper rounded-full flex gap-2 items-center">
+            <MdShare />
+            Compartilhar
+          </button>
+        </ContextCopy>
+        <span>{numberOfClasses} aulas</span>
       </div>
     </div>
   );

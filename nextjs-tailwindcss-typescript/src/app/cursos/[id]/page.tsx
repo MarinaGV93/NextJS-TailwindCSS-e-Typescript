@@ -46,9 +46,21 @@ export default function PageDetalheCurso({ params }: Props) {
           className="
         // 2 terços
         flex-[2]
-        flex flex-col gap-12"
+        flex flex-col gap-12 pb-12"
         >
-          <CourseHeader />
+          <CourseHeader
+            title="🎩 Curso de Figma para DEVs"
+            description="Os melhores desenvolvedores do mercado fazem questão que estar
+        preparados para os mais diversos tipos de desafios nas suas carreiras. A
+        habilidade de desenvolver protótipos ou mesmo de entender como um
+        protótipo foi desenvolvido pode ser um baita diferencial para você.
+        Nesse curso que te mostrar de forma simples e prática como desenvolver
+        protótipos no figma, vamos aproveitar certos conhecimentos de
+        programação ao decorrer do curso. Tenho certeza que esse tem o potencial
+        de ser o melhor curso de figma para desenvolvedores disponíveis
+        gratuitamente. #CODARSE"
+            numberOfClasses={48}
+          />
 
           <CourseContent
             classGroups={[

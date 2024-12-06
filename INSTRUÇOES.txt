@@ -27,3 +27,8 @@
 - Ficar escutando se um elemento esta presente ou nao na tela
     - npm install react-intersection-observer --save
     
+- Pegar a URL da página no inspecionar do navegador
+    - window.location.href
+
+- Usar radix para componentes
+    - npm install @radix-ui/react-dropdown-menu
