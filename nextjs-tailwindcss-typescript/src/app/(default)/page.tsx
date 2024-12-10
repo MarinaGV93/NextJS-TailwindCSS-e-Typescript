@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import { Section } from "./components/section/Section";
-import { KeepWatching } from "./components/KeepWatching";
+import { Section } from "@/components/section/Section";
+import { KeepWatching } from "@/components/KeepWatching";
 
 export const metadata: Metadata = {
   title: "CodarSe - Página Inicial",

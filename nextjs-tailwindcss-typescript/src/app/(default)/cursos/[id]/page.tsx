@@ -1,6 +1,6 @@
-import { CourseContent } from "@/app/components/course-content/components/CourseContent";
-import { CourseHeader } from "@/app/components/course-header/CourseHeader";
-import { StartCourse } from "@/app/components/StartCourse";
+import { CourseContent } from "@/components/course-content/components/CourseContent";
+import { CourseHeader } from "@/components/course-header/CourseHeader";
+import { StartCourse } from "@/components/StartCourse";
 import { Metadata } from "next";
 
 interface Props {

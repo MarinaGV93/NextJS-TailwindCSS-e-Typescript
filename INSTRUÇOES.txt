@@ -32,3 +32,6 @@
 
 - Usar radix para componentes
     - npm install @radix-ui/react-dropdown-menu
+
+- Agrupamento de rotas
+    - Colocar entre parenteses a pasta que quer esconder da rota
