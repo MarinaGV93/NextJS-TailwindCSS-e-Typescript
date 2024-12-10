@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { Section } from "./components/section/Section";
+import { KeepWatching } from "./components/KeepWatching";
 
 export const metadata: Metadata = {
   title: "CodarSe - Página Inicial",
@@ -12,9 +13,10 @@ export default function PageHome() {
         className="
         w-full
         // Se a tela for pelo menos 880px, irá limitar o tamanho em 880px
-        min-[880px]:max-w-[880px]
-        "
+        min-[880px]:max-w-[880px] flex flex-col gap-4"
       >
+        <KeepWatching />
+
         <Section
           title="Veja mais cursos"
           variant="h-list"
