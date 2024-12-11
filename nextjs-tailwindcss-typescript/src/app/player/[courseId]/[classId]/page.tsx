@@ -1,3 +1,5 @@
+import { PlayerHeader } from "@/components/player";
+
 export interface Props {
   params: {
     courseId: string;
@@ -7,10 +9,13 @@ export interface Props {
 
 export default function PagePlayer({ params: { courseId, classId } }: Props) {
   return (
-    <div>
-      <h1>
-        Player {courseId} {classId}
-      </h1>
-    </div>
+    <>
+      <PlayerHeader
+        title="API Rest, Node e Typescript: #00 - Apresentação do curso, tecnologias
+          usadas e muito mais"
+        subtitle="🏆 Curso de API Rest, Node e Typescript"
+      />
+      Player {courseId} {classId}
+    </>
   );
 }
