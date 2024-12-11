@@ -35,3 +35,6 @@
 
 - Agrupamento de rotas
     - Colocar entre parenteses a pasta que quer esconder da rota
+
+- Modificar um estado/cor ou qualquer configuração CSS de um elemento com base se o elemento pai sofreu um hover/active...
+    - Colocar 'group' no elemento pai e 'group-hover...' no filho
