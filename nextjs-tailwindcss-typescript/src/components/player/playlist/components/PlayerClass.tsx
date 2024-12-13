@@ -18,7 +18,7 @@ export const PlayerClass = ({
   onCheck,
 }: IPlayerClassrProps) => {
   return (
-    <button className="flex gap-6 p-4 items-center" onClick={onPlay}>
+    <button className="flex gap-6 p-4 items-center" onClick={() => onPlay()}>
       {!done && (
         <div
           className="group"
