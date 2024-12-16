@@ -19,17 +19,32 @@ export const PlayerPlaylist = ({
   playingCourseId,
 }: IPlayerPlaylistProps) => {
   // Aceita numero ou undefined
-  const [openedIndex, setOpenedIndex] = useState<number | undefined>(undefined);
+  const [openedIndex, setOpenedIndex] = useState<number | undefined>(
+    // Quando inicializar o componente, verificar qual id da aula está sendo executado, compara na playlist, para saber qual modulo precisa ser aberto por padrao
+    classGroups
+      // Procura o index
+      .findIndex((classGroup) =>
+        // Retorna true no 1º item
+        // true
+
+        // Analisa quais das classes tem a condição true e irá receber true no some que significa que o classGroup tem a condição verdadeira
+        classGroup.classes.some(
+          (classItem) => classItem.classId === playingClassId
+        )
+      )
+  );
 
   const router = useRouter();
 
   return (
-    <div className="flex flex-col gap-2">
+    // h-full irá ocupar todo espaço disponivel na tela
+    <div className="flex flex-col gap-2 h-full">
       <div className="flex flex-col p-4 bg-paper">
         <h3 className="text-lg font-bold">Conteúdo do curso</h3>
       </div>
 
-      <ol>
+      {/* Overflow- auto é para o scroll */}
+      <ol className="overflow-auto overflow-primary">
         {classGroups.map((classGroup, index) => (
           <li key={classGroup.title}>
             <PlayerClassGroup
