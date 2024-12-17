@@ -1,4 +1,5 @@
 import { PlayerHeader, PlayerPlaylist } from "@/components/player";
+import { PlayerVideoPlayer } from "@/components/player/PlayerVideoPlayer";
 
 interface Props {
   params: {
@@ -28,7 +29,7 @@ export default function PagePlayer({ params: { courseId, classId } }: Props) {
             playingCourseId={courseId}
             classGroups={[
               {
-                title: "Introdução e apresentação do projeto",
+                title: "1 - Introdução e apresentação do projeto",
                 classes: [
                   {
                     done: true,
@@ -57,7 +58,7 @@ export default function PagePlayer({ params: { courseId, classId } }: Props) {
                 ],
               },
               {
-                title: "Introdução e apresentação do projeto",
+                title: "2 - Introdução e apresentação do projeto",
                 classes: [
                   {
                     done: true,
@@ -86,7 +87,7 @@ export default function PagePlayer({ params: { courseId, classId } }: Props) {
                 ],
               },
               {
-                title: "Introdução e apresentação do projeto",
+                title: "3 - Introdução e apresentação do projeto",
                 classes: [
                   {
                     done: true,
@@ -115,7 +116,7 @@ export default function PagePlayer({ params: { courseId, classId } }: Props) {
                 ],
               },
               {
-                title: "Introdução e apresentação do projeto",
+                title: "4 - Introdução e apresentação do projeto",
                 classes: [
                   {
                     done: true,
@@ -144,7 +145,7 @@ export default function PagePlayer({ params: { courseId, classId } }: Props) {
                 ],
               },
               {
-                title: "Introdução e apresentação do projeto",
+                title: "5 - Introdução e apresentação do projeto",
                 classes: [
                   {
                     done: true,
@@ -173,7 +174,7 @@ export default function PagePlayer({ params: { courseId, classId } }: Props) {
                 ],
               },
               {
-                title: "Introdução e apresentação do projeto",
+                title: "6 - Introdução e apresentação do projeto",
                 classes: [
                   {
                     done: true,
@@ -202,7 +203,7 @@ export default function PagePlayer({ params: { courseId, classId } }: Props) {
                 ],
               },
               {
-                title: "Introdução e apresentação do projeto",
+                title: "7 - Introdução e apresentação do projeto",
                 classes: [
                   {
                     done: true,
@@ -234,7 +235,14 @@ export default function PagePlayer({ params: { courseId, classId } }: Props) {
           />
         </div>
 
-        <div className="flex-1">Player</div>
+        <div className="flex-1">
+          <PlayerVideoPlayer
+            // Id do vídeo
+            // Do v ate o &:
+            // https://www.youtube.com/watch?v=bP47qRVRqQs&ab_channel=LucasSouzaDev
+            videoId="bP47qRVRqQs"
+          />
+        </div>
       </div>
     </main>
   );
