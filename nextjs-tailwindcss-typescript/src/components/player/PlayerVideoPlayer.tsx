@@ -26,7 +26,15 @@ export const PlayerVideoPlayer = ({ videoId }: IPlayerVideoPlayerProps) => {
 
   return (
     <>
-      <ReactPlayer url={`https://www.youtube.com/watch?v=${videoId}`} />
+      <ReactPlayer
+        height="100%"
+        width="100%"
+        // Mostrar os controles de reprodução
+        controls={true}
+        // Comecar a reproduzir ao carregar a pagina
+        playing={true}
+        url={`https://www.youtube.com/watch?v=${videoId}`}
+      />
     </>
   );
 };

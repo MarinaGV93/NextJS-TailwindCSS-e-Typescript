@@ -235,13 +235,19 @@ export default function PagePlayer({ params: { courseId, classId } }: Props) {
           />
         </div>
 
-        <div className="flex-1">
-          <PlayerVideoPlayer
-            // Id do vídeo
-            // Do v ate o &:
-            // https://www.youtube.com/watch?v=bP47qRVRqQs&ab_channel=LucasSouzaDev
-            videoId="bP47qRVRqQs"
-          />
+        <div className="flex-1 ">
+          <div
+            className="
+          // Respeitar sempre a proporção do video
+          aspect-video"
+          >
+            <PlayerVideoPlayer
+              // Id do vídeo
+              // Do v ate o &:
+              // https://www.youtube.com/watch?v=bP47qRVRqQs&ab_channel=LucasSouzaDev
+              videoId="bP47qRVRqQs"
+            />
+          </div>
         </div>
       </div>
     </main>

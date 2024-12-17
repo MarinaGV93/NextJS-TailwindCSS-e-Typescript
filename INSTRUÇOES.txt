@@ -45,6 +45,8 @@
             - npm install react-player
         - Importar
             - import ReactPlayer from "react-player";
+        - Demo de tudo que pode ser feito
+            - https://cookpete.github.io/react-player
 
 - Tratar erros de hidratação que indica que o componente (que é criado no servidor) não esta igual ao front (nem sempre consegue tratar 100%)
     - Importar direto no front (dinamico)
