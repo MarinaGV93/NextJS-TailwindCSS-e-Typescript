@@ -1,3 +1,5 @@
+"use client";
+
 import { PlayerHeader, PlayerPlaylist } from "@/components/player";
 import { PlayerVideoPlayer } from "@/components/player/PlayerVideoPlayer";
 
@@ -246,6 +248,9 @@ export default function PagePlayer({ params: { courseId, classId } }: Props) {
               // Do v ate o &:
               // https://www.youtube.com/watch?v=bP47qRVRqQs&ab_channel=LucasSouzaDev
               videoId="bP47qRVRqQs"
+              onPlayNext={() => {
+                console.log("Play next");
+              }}
             />
           </div>
         </div>
